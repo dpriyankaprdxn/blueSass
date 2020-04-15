@@ -1,0 +1,44 @@
+
+/* 1.2. Clear Fix
+========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none; 
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 88.5%; 
+  margin: 0 auto;
+}
+
+h1 { 
+-ms-flex-preferred-size: 15%;
+flex-basis: 15%;
+}
