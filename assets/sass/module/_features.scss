@@ -1,0 +1,60 @@
+.features {
+  margin: 120px 0;
+  text-align: center;
+
+  ul { 
+    margin-top: 70px; 
+    @include flex;
+    @include flexcontent;
+
+    div {
+      padding: 23px 14%;
+      @include borderradius(15px);
+      margin-bottom: 40px;
+      display: inline-block;
+      background: color(_EEEEEF);
+    }
+  }
+
+  li {
+    @include boxsizing;
+    padding : 10px 2%;
+    @include flexbasis(21%);
+  }
+
+  h4 { margin-bottom: 9px; }
+
+  h3 {
+    & + p {
+      width: 66%;
+      margin: 0 auto;      
+    }
+  }
+
+  a {
+    color: color(ternary);
+    text-indent: -9999px; 
+
+    &:before {
+      float: left;
+      font : $_40 $fontAwesome;
+      text-indent: 0;
+    }
+  }
+} 
+
+.features__mobile {
+  &:before { content: "\f10a"; }
+}
+
+.features__love {
+  &:before { content: "\f004"; }
+}
+
+.features__star {
+  &:before { content: "\f005"; }
+}
+
+.features__api {
+  &:before { content: "\f013"; }
+}

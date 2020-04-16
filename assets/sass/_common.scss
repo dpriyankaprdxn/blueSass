@@ -38,7 +38,27 @@ li {
   margin: 0 auto;
 }
 
-h1 { 
--ms-flex-preferred-size: 15%;
-flex-basis: 15%;
+h1 { @include flexbasis(15%); }
+
+h2 {
+  margin-bottom: 14px;
+  font-size: $_36;
+  text-transform: uppercase;
+}
+
+h3 {
+  padding-bottom: 14px;
+  position: relative;
+  font-size: $_29;
+  text-transform: capitalize;
+}
+
+h4 {
+  font : $_16 $sans-serif;
+  text-transform : uppercase;
+}
+
+p { 
+  color: color(_grey);
+  line-height: 27px
 }

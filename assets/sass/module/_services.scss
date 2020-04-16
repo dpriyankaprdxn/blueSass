@@ -1,0 +1,28 @@
+.services { 
+  li { 
+    padding-top: 176px;  
+    border-bottom: 2px $solid color(f2);
+    @include flex;
+    @include alignitem;
+    @include flexcontent;
+
+    &:nth-child(2) { @include rowreverse; }
+  }
+
+  h3 { 
+    margin-bottom: 20px;
+
+    &:before {
+      content: '';
+      width: 6%;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      background: color(primary);
+    }
+  }
+
+  img { @extend .banner__img; }
+}
+
+.services__info { @include flexbasis(48.5%); }

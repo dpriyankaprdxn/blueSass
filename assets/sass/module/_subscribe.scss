@@ -1,0 +1,50 @@
+.subscribe {
+  padding : 115px 0;
+  background : #39DEFE;
+  text-align : center;
+
+  p {
+    width : 58%;
+    margin : 7px auto 78px;
+    color : color(primary);
+    font-size : $_18;
+    line-height : 30px;
+  }
+}
+
+.subscribe__formgroup { 
+  width: 32%;
+  margin-right: 1%;
+  float: left; 
+
+  & input {
+    @include boxsizing;
+    width: 96%;
+    padding: 17px 3%;
+    border : none;
+    @include borderradius(4px);
+    background: color(_88ecff);
+
+    &::placeholder {
+      color: color(_black);
+      font: $_500 $_16 $sans-serif;
+    }
+  }
+}
+
+.subscribe__formcontrol {
+  width: 32%;
+  display: inline-block; 
+}
+
+.subscribe__button { 
+  @include boxsizing;
+  width: 96%;
+  padding: 15px 0; 
+  border : $_1 $solid color(_transparent);
+  @include borderradius(25px);
+  background: color(ternary);
+  color: color(_white);
+  font-size: $_16;
+  text-transform: uppercase;
+}

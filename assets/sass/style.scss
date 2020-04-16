@@ -1,4 +1,12 @@
 @import 'resetstyle';
+@import 'variables';
+@import 'functions';
 @import 'mixin';
 @import 'common';
 @import 'module/header';
+@import 'module/banner';
+@import 'module/services';
+@import 'module/reviews';
+@import 'module/features';
+@import 'module/subscribe';
+@import 'module/footer';

@@ -1,0 +1,50 @@
+footer { 
+  padding: 104px 0 118px;
+  text-align: center; 
+
+  p {
+    width: 27%;
+    margin:  0 auto 27px;
+    font-size: $_14;
+    text-transform: capitalize;
+    
+    span {
+      &:last-of-type { text-transform: lowercase; }
+    }
+  }
+
+  a { color : color(secondary) }
+}
+
+.footersocial {
+  li {
+    &:not(:last-child) { margin-right: 3%; }
+  }
+
+  a {
+    padding: 2px;
+    text-indent: -9999px; 
+
+    &:before {
+      font : $_28 $fontAwesome;
+      float: left;
+      text-indent: 0;
+    }
+  }
+} 
+
+.footersocial__facebook {
+  &:before { content: "\f09a"; }
+}
+
+.footersocial__twitter {
+  &:before { content: "\f099"; }
+}
+
+.footersocial__linkedin {
+  &:before { content: "\f0e1"; }
+}
+
+.footersocial__appstore {
+  &:before { content: "\f179"; }
+}

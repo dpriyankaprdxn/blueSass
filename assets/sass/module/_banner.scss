@@ -1,0 +1,58 @@
+.banner {
+  margin-bottom: 119px;
+  background: color(primary);
+  color: color(_white);
+
+  .wrapper { 
+    width: 86.5%; 
+    padding : 223px 0 576px;
+    position: relative;
+  }
+  
+  ul {
+    position: absolute;
+    top : 20%;
+    left: 50%;
+  }
+  
+  li:last-child {
+    width: 100%;
+    position: absolute;
+    top : 12%;
+    left :46%;
+  }
+}
+
+.banner__text { 
+  width: 50%;
+  position: absolute; 
+
+  p {
+    color : color(_white);
+    font-size: $_24;
+    line-height: 39px;
+
+    & a { color: color(_white);}  
+
+    & + a {
+      padding: 15px;
+      border : $_1 $solid color(_transparent);
+      @include borderradius(25px);
+      margin-top: 29px;
+      background: color(ternary);
+      color: color(_white);
+
+      &:before {
+        content: "\f179";
+        margin-right: 3px;
+        float: left;
+        font-family: $fontAwesome;
+      }
+    }
+  }
+}
+
+.banner__img {
+  -webkit-box-shadow: 2px 2px 10px color(greyshade);
+  box-shadow: 2px 2px 10px color(greyshade);
+}

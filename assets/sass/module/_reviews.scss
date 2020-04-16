@@ -1,0 +1,48 @@
+.reviews {
+  padding: 117px 0 121px;
+  background: color(f2);
+  text-align: center;
+}
+
+.review__slider { 
+  margin-top: 62px; 
+
+  & > li{
+    &:not(:first-child) { display: none; }
+  }
+
+  figure {
+    margin-bottom: 24px;
+    display: inline-block; 
+
+    img { @include borderradius(50%); }
+  }
+
+  span {
+    margin-bottom: 7px;
+    display: block;
+    color: color(_7e);
+    font : $_550 $_13 $sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  p {
+    width: 64%; 
+    margin: 33px auto 25px;
+    font-size: $_18;
+  }
+}
+
+.rating__star {  
+  overflow : hidden;
+  color: color(_lightyellow);
+  text-indent: -9999px; 
+
+  &:before {
+    content: "\f005";
+    float: left;
+    font: $_14 $fontAwesome;
+    text-indent: 0;
+  }
+}

@@ -1,35 +1,53 @@
+@mixin boxsizing {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 @mixin transform($property) {
-    -webkit-transform: $property;
-    -ms-transform: $property;
-    transform: $property;
-  }
-  
-  @mixin flex {
-      display : -webkit-box;
-      display : -ms-flexbox;
-      display : flex
-  }
-  
-  @mixin flexcontent {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-  
-  @mixin flexbasis($width) {
-    -ms-flex-preferred-size: $width;
-    flex-basis: $width;
-  }
-  
-  @mixin transition($seconds) {
-    -webkit-transition: $seconds ease-in-out;
-    -moz-transition: $seconds ease-in-out;
-    -o-transition: $seconds ease-in-out;
-    transition: $seconds ease-in-out;
-  }
-  
-  @mixin borderradius($radius) {
-    -moz-border-radius   : $radius;
-    -webkit-border-radius :  $radius;
-    border-radius :  $radius;
-  }
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin flex {
+    display : -webkit-box;
+    display : -ms-flexbox;
+    display : flex
+}
+
+@mixin flexcontent {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@mixin flexbasis($width) {
+  -ms-flex-preferred-size: $width;
+  flex-basis: $width;
+}
+
+@mixin rowreverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+@mixin alignitem {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@mixin transition($seconds) {
+  -webkit-transition: $seconds ease-in-out;
+  -moz-transition: $seconds ease-in-out;
+  -o-transition: $seconds ease-in-out;
+  transition: $seconds ease-in-out;
+}
+
+@mixin borderradius($radius) {
+  -moz-border-radius   : $radius;
+  -webkit-border-radius :  $radius;
+  border-radius :  $radius;
+}
