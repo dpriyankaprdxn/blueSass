@@ -6,7 +6,19 @@
     @include alignitem;
     @include flexcontent;
 
-    &:nth-child(2) { @include rowreverse; }
+    @include breakpoint('phone') { 
+      padding-top: 110px;
+      @include flex-direction(column);
+    }
+
+    &:nth-child(2) { 
+      @include rowreverse; 
+
+      @include breakpoint('phone') { 
+        padding-top: 110px;
+        @include flex-direction(column);
+      }
+    }
   }
 
   h3 { 
@@ -22,7 +34,20 @@
     }
   }
 
-  img { @extend .banner__img; }
+  img { 
+    @extend .banner__img; 
+
+    @include breakpoint('ipad') { max-width: 381px; }  
+  }
+
+  figure {
+    @include breakpoint('phone') { margin-bottom: 15px; }
+  }
 }
 
-.services__info { @include flexbasis(48.5%); }
+.services__info {
+  @include flexbasis(48.5%); 
+
+  @include breakpoint('ipad') { @include flexbasis(35%); }
+  @include breakpoint('phone') { text-align: center; }
+}

@@ -5,6 +5,7 @@ $colors: (
   "ternary" : #4186ed,
   "active": #00008b,
   "_white" : #fff,
+  "light-grey": #ddd,
   "_black" : #000,
   "_grey" :  #928f9e,
   "_transparent" : transparent,
@@ -13,7 +14,8 @@ $colors: (
   "_7e" : #7e7e7e,
   "_lightyellow" : #f7c13b,
   "_EEEEEF" : #EEEEEF,
-  "_88ecff" : #88ecff
+  "_88ecff" : #88ecff,
+  "p-color" : #2691B4
 );
 
 //font size
@@ -37,3 +39,10 @@ $solid : solid;
 // font family
 $sans-serif : "sans-serif";
 $fontAwesome : "fontAwesome";
+
+// Breakpoints
+$notebook: 1024px;
+$ipad: 995px;
+$phone: 767px;
+$iphone: 540px;
+$small-iphone: 320px;

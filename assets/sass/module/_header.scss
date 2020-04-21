@@ -5,6 +5,8 @@ header {
     padding: 15px 0;
     @include flex;
     @include flexcontent;
+
+    @include breakpoint('ipad') { position: relative; }
   }
 }
 
@@ -20,6 +22,8 @@ header {
   @include transform(rotate(0deg));
   @include transition(.5s);
 
+  &:hover + nav { display: block;  }
+
   span {
     width: 100%;
     height: 2px;
@@ -33,13 +37,13 @@ header {
     &:nth-child(2) { top : 6px; }
     &:nth-child(3) { top : 12px; }
   }
-
+  @include breakpoint('ipad') {
   .open {
     span {
       &:nth-child(1) { 
         top : 8px; 
         @include transform(rotate(135deg));
-      }
+      } 
 
       &:nth-child(1) { opacity: 0; } 
       
@@ -49,14 +53,41 @@ header {
       }    
     }
   }
+  }
+
+  @include breakpoint('ipad') { display: block; }
+
 }   
 
 nav {
-  li { padding: 10px 5%; }
+  li { 
+    padding: 10px 5%; 
+
+    @include breakpoint('ipad') {
+      padding : 10px 5%;
+      display: block; 
+      text-align: center;
+    }
+  }
 
   a {
     color: color(_white);
     font: $bold $_14 $sans-serif;
+
+    @include reverse-breakpoint('notebook') {
+      &:hover {
+        color : color(active);
+      }
+    }
+  }
+
+  @include breakpoint('ipad') {
+    width: 100%;
+    display: none;
+    position: absolute; 
+    z-index: 1;
+    top: 98%;
+    left : 0;
   }
 }
 

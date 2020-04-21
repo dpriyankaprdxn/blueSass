@@ -13,13 +13,28 @@
       margin-bottom: 40px;
       display: inline-block;
       background: color(_EEEEEF);
+
+    @include breakpoint('phone') { padding: 23px 10%; }
     }
+
+    @include breakpoint('ipad') { 
+      margin-bottom: 10px;
+      @include flex-wrap(wrap);
+    }
+
+    @include breakpoint('phone') { @include justify-content(center); }
   }
 
   li {
     @include boxsizing;
     padding : 10px 2%;
     @include flexbasis(21%);
+
+    @include breakpoint('ipad') { @include flexbasis(35%); }
+    @include breakpoint('phone') {  
+      border-bottom: $_1 $solid color(light-grey);
+      @include flexbasis(60%);
+    }
   }
 
   h4 { margin-bottom: 9px; }
@@ -28,6 +43,10 @@
     & + p {
       width: 66%;
       margin: 0 auto;      
+    }
+
+    &:before{
+    @include breakpoint('phone') { width: 10%; }
     }
   }
 
@@ -40,6 +59,11 @@
       font : $_40 $fontAwesome;
       text-indent: 0;
     }
+
+    @include reverse-breakpoint('notebook') {
+      &:hover { color: color(_88ecff); }
+    }
+
   }
 } 
 

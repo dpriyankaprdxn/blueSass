@@ -7,12 +7,17 @@
     width: 86.5%; 
     padding : 223px 0 576px;
     position: relative;
+
+    @include breakpoint('ipad') { padding: 223px  0 450px;   }
+    @include breakpoint('phone') { padding : 135px 0 460px; }
   }
   
   ul {
     position: absolute;
     top : 20%;
     left: 50%;
+    
+    @include breakpoint('phone') {  display: none; }
   }
   
   li:last-child {
@@ -20,6 +25,8 @@
     position: absolute;
     top : 12%;
     left :46%;
+
+    @include breakpoint('ipad') { left: 10%; }
   }
 }
 
@@ -48,7 +55,27 @@
         float: left;
         font-family: $fontAwesome;
       }
+
+      @include reverse-breakpoint('notebook') {
+        &:hover {
+          border : 1px solid color(ternary);
+          background: color(_white);
+          color: color(ternary);
+        }
+      }
     }
+  }
+
+  @include breakpoint('ipad') {  width: 48%;  }
+  @include breakpoint('iphone') { 
+    width: 75%;
+    left: 12%;
+  }
+
+  @include breakpoint('phone') { 
+    width: 60%; 
+    left: 25%;
+    text-align: center;
   }
 }
 

@@ -6,7 +6,7 @@
   p {
     width : 58%;
     margin : 7px auto 78px;
-    color : color(primary);
+    color : color(p-color);
     font-size : $_18;
     line-height : 30px;
   }
@@ -30,11 +30,21 @@
       font: $_500 $_16 $sans-serif;
     }
   }
+
+  @include breakpoint('ipad') { width: 50%; }
+  @include breakpoint('phone') { 
+    width: 100%;
+    margin-bottom: 25px;
+    display: block;
+    float: unset;
+  }
 }
 
 .subscribe__formcontrol {
   width: 32%;
   display: inline-block; 
+
+  @include breakpoint('phone') { width: 50%; }
 }
 
 .subscribe__button { 
@@ -47,4 +57,12 @@
   color: color(_white);
   font-size: $_16;
   text-transform: uppercase;
+
+  @include reverse-breakpoint('notebook') {
+    &:hover {
+      border : 1px solid color(ternary);
+      background: color(_white);
+      color: color(ternary);
+    }
+  }
 }

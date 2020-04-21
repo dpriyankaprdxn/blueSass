@@ -11,6 +11,8 @@ footer {
     span {
       &:last-of-type { text-transform: lowercase; }
     }
+
+    @include breakpoint('ipad') { width: 50%; }
   }
 
   a { color : color(secondary) }
@@ -29,6 +31,10 @@ footer {
       font : $_28 $fontAwesome;
       float: left;
       text-indent: 0;
+    }
+
+    @include reverse-breakpoint('notebook') {
+      &:hover { color: color(ternary);      }
     }
   }
 } 
